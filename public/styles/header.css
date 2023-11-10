@@ -1,0 +1,12 @@
+.name-header {
+  height: 520px;
+  padding-top: 135px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: #8a3ab9;
+  background-color:#fbad50; 
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  justify-content: center;
+}
+

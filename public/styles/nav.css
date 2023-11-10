@@ -1,0 +1,34 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  justify-content: space-between;
+  align-items: baseline;
+
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+#logo {
+  font-family: 'Bungee', sans-serif;
+
+}
+
+.write {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.write p {
+  padding-bottom: 0;
+
+}
+
+.write i {
+  color: red;
+}
