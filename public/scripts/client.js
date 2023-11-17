@@ -13,7 +13,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $(".tweet-list").append($tweet);
+      $(".tweet-list").prepend($tweet);
     }
   };
   // renderTweets(tweetData);
