@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Tweeter is built on HTML, CSS, JS, jQuery and AJAX front-end, with Node and Express back-end.
 
 ## Getting Started
 
@@ -12,7 +12,20 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+
+## Final Product
+
+!["Desktop View"](https://github.com/GwMamba/tweeter/blob/master/screenshots/Desktop-view.jpg)
+
+!["Mobile View"](https://github.com/GwMamba/tweeter/blob/master/screenshots/Mobile-view.jpg)
+
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- chance
+- md5
+
+## Credits
+
+Tweeter was developed by Gerald Mwangi. A great many thanks to the LHL mentors and instructors who were involved in assisting me in the journey to create it.
