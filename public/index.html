@@ -4,6 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -51,37 +52,37 @@
     </div>
 
   </nav>
-  <header class="name-header">
-    <div class="header">
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Gerald M</h2>
-    </div>
-  </header>
+  <div id="responsive">
+    <header class="name-header">
+      <div class="header">
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2>Gerald M</h2>
+      </div>
+    </header>
 
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <h2 class="Compose Tweet"></h2>
-      <form id="tweet-form" method="POST" action="/tweets">
-        <p id="no-content" class="te-error">Please type your message before tweeting.</p>
-        <p id="too-many-chars" class="te-error">Please limit your tweet to 140 characters.</p>  
-        <label for="tweet-text"><b>What are you humming about?</b></label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div>
-          <button type="submit"><b>TWEET</b></button>
-          <output id="charcount" name="counter" class="counter" for="tweet-text"><b>140</b></output>
-        </div>
-      </form>
-    </section>
-    <section class="tweet-list">
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <h2 class="Compose Tweet"></h2>
+        <form id="tweet-form" method="POST" action="/tweets">
+          <p id="no-content" class="te-error">Please type your message before tweeting.</p>
+          <p id="too-many-chars" class="te-error">Please limit your tweet to 140 characters.</p>
+          <label for="tweet-text"><b>What are you humming about?</b></label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit"><b>TWEET</b></button>
+            <output id="charcount" name="counter" class="counter" for="tweet-text"><b>140</b></output>
+          </div>
+        </form>
+      </section>
+      <section class="tweet-list"></section>
 
-    </section>
-  
-  </main>
+    </main>
+  </div>
 </body>
 
 </html>

@@ -5,8 +5,13 @@
   flex-flow: column;
   align-items: center;
   color: #8a3ab9;
-  background-color:#fbad50; 
+  background-color: #fbad50;
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
   justify-content: center;
 }
 
+@media only screen and (min-width: 1024px) {
+  #responsive {
+    display: flex;
+  }
+};

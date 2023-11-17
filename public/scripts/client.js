@@ -18,11 +18,27 @@ $(document).ready(function() {
   };
   // renderTweets(tweetData);
 
+  const loadTweets = function() {
+    // GET request
+    console.log("gbvsvf");
+    $.ajax({
+      url: "/tweets",
+      type: "GET",
+    })
+      .then(function(tweets) {
+        $(".tweet-list").empty();
+        renderTweets(tweets);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+    }
+
   // Create new tweet
   const createTweetElement = function(tweet) {
     let $tweet = $(`
     <article class="tweet">
-    <header>
+    <header class="tweeterid">
       <div class="tweet-avatar">
         <img src=${(tweet.user.avatars)}>
         <p>${(tweet.user.name)}</p>
@@ -82,22 +98,10 @@ $(document).ready(function() {
         console.log("error:", error);
       });
 
-    const loadTweets = function() {
-      // GET request
-      $.ajax({
-        url: "/tweets",
-        type: "GET",
-      })
-        .then(function(tweets) {
-          $(".tweet-list").empty();
-          renderTweets(tweets);
-        })
-        .catch((error) => {
-          console.log("error", error);
-        });
-
-    };
+   
+    
     loadTweets();
 
+  })
+  loadTweets();
   });
-});

@@ -7,7 +7,7 @@ nav {
   color: #FFFFFF;
   justify-content: space-between;
   align-items: baseline;
-
+  z-index: 1;
   padding-left: 1.5em;
   padding-right: 1.5em;
 }

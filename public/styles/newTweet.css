@@ -2,6 +2,12 @@
   height: auto;
 }
 
+@media only screen and (min-width: 1024px) {
+  .container {
+    margin-top: 120px;
+  }
+};
+
 .new-tweet {
   padding: 10px;
 }
@@ -12,6 +18,7 @@
   margin: 0;
   padding: 0 1em;
   font-family: 'Bungee', sans-serif;
+  cursor: pointer;
 }
 
 .new-tweet textarea {
