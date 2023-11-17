@@ -1,0 +1,62 @@
+ /* Basic styling for the tweet article */
+.tweet {
+  border: solid 3px;
+  padding: 0.5em;
+  margin: 2em;
+}
+
+.tweet:hover {
+  box-shadow: 5px 5px #4056A1;
+}
+
+/* Styling for the tweet text */
+.tweet-text {
+  border-bottom: solid 3px;
+  margin: 0 auto;
+}
+
+/* Styling for the footer section */
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.65em;
+}
+
+.tweet footer i {
+  color: #4056a1;
+}
+
+/* Hover effects for specific icons */
+.tweet .fa-flag:hover,
+.tweet .fa-retweet:hover,
+.tweet .fa-heart:hover {
+  color: #FFD700;
+}
+
+/* Styling for the header section */
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 1em;
+  margin-top: 0;
+}
+
+/* Styling for the avatar and user information */
+.tweet-avatar {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-avatar img {
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tweet-avatar p {
+  margin: 0;
+  font-weight: bold;
+}

@@ -25,12 +25,16 @@
   <link rel="stylesheet" type="text/css" href="/styles/nav.css" />
   <link rel="stylesheet" type="text/css" href="/styles/header.css" />
   <link rel="stylesheet" type="text/css" href="/styles/newTweet.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/tweet-list.css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"defer></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
 </head>
@@ -41,7 +45,9 @@
     <span id="logo">tweeter</span>
     <div class="write">
       <p id="write"><b>Write</b> a new tweet</p>
-      <i class="fa-solid fa-angles-down fa-fade"></i>
+      <a href="#tweet-text">
+        <i class="fa-solid fa-angles-down fa-fade"></i>
+      </a>
     </div>
 
   </nav>
@@ -51,7 +57,7 @@
     </div>
     <br>
     <div>
-      <h2>Your Name</h2>
+      <h2>Gerald M</h2>
     </div>
   </header>
 
@@ -60,43 +66,22 @@
   <main class="container">
     <section class="new-tweet">
       <h2 class="Compose Tweet"></h2>
-      <form method="POST" action="/tweets">
+      <form id="tweet-form" method="POST" action="/tweets">
+        <p id="no-content" class="te-error">Please type your message before tweeting.</p>
+        <p id="too-many-chars" class="te-error">Please limit your tweet to 140 characters.</p>  
         <label for="tweet-text"><b>What are you humming about?</b></label>
         <textarea name="text" id="tweet-text"></textarea>
         <div>
           <button type="submit"><b>TWEET</b></button>
-          <output id="charcount" name="counter" class="counter" 
-          for="tweet-text"><b>140</b></output>
+          <output id="charcount" name="counter" class="counter" for="tweet-text"><b>140</b></output>
         </div>
       </form>
-      </section>
-      <section class="just-posted">
-        <form method="POST" action="/tweets">
-          <header>
-            <div>
-              <i class="fa-solid fa-gear fa-spin"></i>
-            </div>
-          </header>
-          <article>
-            <p>Though I fly through the valley of the shadow of death, I shall not fear for I am at 80,000 feet, and climbing.
-            </p>
-            <div class="divider"></div>
-          </article>
-          <footer>
-            <div class="timeposted">
-              <span>10 days ago</span>
-            </div>
-            <li class="emojis">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </li>
-          </footer>
-        </form>
-      
-      </section>
+    </section>
+    <section class="tweet-list">
+
+    </section>
   
   </main>
-  </body>
-  
-  </html>
+</body>
+
+</html>
