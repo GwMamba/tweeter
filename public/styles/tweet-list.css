@@ -3,6 +3,7 @@
   border: solid 3px;
   padding: 0.5em;
   margin: 2em;
+  word-break: break-word;
 }
 
 .tweet:hover {

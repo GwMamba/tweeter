@@ -16,7 +16,6 @@ $(document).ready(function() {
       $(".tweet-list").prepend($tweet);
     }
   };
-  // renderTweets(tweetData);
 
   const loadTweets = function() {
     // GET request
@@ -65,10 +64,9 @@ $(document).ready(function() {
     // prevent the default browser behavior
     // to create a new tweet page.
     event.preventDefault();
-    $characterCount.text("140");
 
     $(".te-error").slideUp();
-    const tweetVal = $("#tweet-text").val();
+    const tweetVal = $("#tweet-text").val().trim();
 
     if (!tweetVal) {
       $("#no-content").slideDown();
@@ -91,6 +89,8 @@ $(document).ready(function() {
     })
       .then((response) => {
         $("#tweet-text").val("");
+        $characterCount.text("140");
+
         loadTweets();
         console.log("response:", response);
       })

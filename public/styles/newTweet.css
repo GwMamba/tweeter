@@ -27,6 +27,7 @@
   padding: 0 1.1em;
   margin: 10px;
   background-color: #f4f1ec;
+  word-break: break-word;
 }
 
 .new-tweet div {
@@ -41,7 +42,13 @@
   color: #f4f1ec;
 }
 
+
 .te-error {
   display: none;
   color: red;
 }
+
+.charlimit {
+  color: red;
+}
+
